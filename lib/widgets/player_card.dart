@@ -60,11 +60,6 @@ class PlayerCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 4),
-              Text(
-                'Punkte gesamt',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 10),
-              ),
-              const SizedBox(height: 8),
               if (player.currentTeam != null) ...[
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
