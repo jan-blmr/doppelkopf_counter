@@ -19,8 +19,7 @@ Future<void> saveGameState({
   };
   List<String> lastGamesList = prefs.getStringList('lastGames') ?? [];
   if (!gameInProgress && gameHistory.isNotEmpty) {
-    lastGamesList.insert(0, jsonEncode(currentGame));
-    if (lastGamesList.length > 5) lastGamesList = lastGamesList.sublist(0, 5);
+    lastGamesList.add(jsonEncode(currentGame));
     await prefs.setStringList('lastGames', lastGamesList);
   }
   await prefs.setString('players', playersJson);
